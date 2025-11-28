@@ -147,6 +147,23 @@
 				<button onclick="avaliarReceita()">Avalie nossa receita</button>
 			</footer>
 		</section>
+
+		<div id="modalAvaliacao" class="modal-avaliacao">
+			<div class="modal-avaliacao-conteudo">
+				<span class="modal-fechar" onclick="fecharModal()">X</span>
+				<h3>Avalie esta receita</h3>
+				<div class="modal-estrelas" id="estrelasModal">
+					<span onclick="selecionarEstrela(1)">⭐</span>
+					<span onclick="selecionarEstrela(2)">⭐</span>
+					<span onclick="selecionarEstrela(3)">⭐</span>
+					<span onclick="selecionarEstrela(4)">⭐</span>
+					<span onclick="selecionarEstrela(5)">⭐</span>
+				</div>
+
+				<button class="modal-btn" onclick="confirmarAvaliacao()">Confirmar</button>
+			</div>
+
+		</div>
 	</main>
 
 	<footer>

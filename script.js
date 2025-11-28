@@ -1,15 +1,32 @@
+let notaSelecionada = 0;
+
 // Função para avaliar a receita
 function avaliarReceita() {
-	const avaliacao = prompt("Avalie esta receita de 1 a 5 estrelas:");
-	const nota = parseInt(avaliacao);
+	document.getElementById("modalAvaliacao").style.display = "flex";
+}
 
-	if (nota >= 1 && nota <= 5) {
-		sessionStorage.setItem("avaliacaoReceita", nota);
-		atualizarEstrelas(nota);
-		alert("Obrigado pela sua avaliação!");
-	} else {
-		alert("Por favor, insira um número de 1 a 5.");
+function fecharModal() {
+	document.getElementById("modalAvaliacao").style.display = "none";
+}
+
+function selecionarEstrela(nota) {
+	notaSelecionada = nota;
+	const estrelas = document.getElementById("estrelasModal").querySelectorAll("span");
+	estrelas.forEach((estrela, index) => {
+		estrela.textContent = index < nota ? "⭐" : "☆";
+	});
+}
+
+function confirmarAvaliacao() {
+	if (notaSelecionada < 1 || notaSelecionada > 5) {
+		alert("Selecione uma estrela!");
+		return;
 	}
+
+	sessionStorage.setItem("avaliacaoReceita", notaSelecionada);
+	atualizarEstrelas(notaSelecionada);
+	fecharModal();
+	alert('Obrigado pela sua avaliação!');
 }
 
 // Atualiza visualmente as estrelas
