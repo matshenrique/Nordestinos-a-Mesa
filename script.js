@@ -26,7 +26,7 @@ function confirmarAvaliacao() {
 	sessionStorage.setItem("avaliacaoReceita", notaSelecionada);
 	atualizarEstrelas(notaSelecionada);
 	fecharModal();
-	alert('Obrigado pela sua avaliação!');
+	
 }
 
 // Atualiza visualmente as estrelas
@@ -37,23 +37,7 @@ function atualizarEstrelas(nota) {
 
 // Função para imprimir a receita
 function imprimirReceita() {
-	const conteudo = document.getElementById("receita").innerHTML;
-	const janela = window.open("", "", "width=800,height=600");
-	janela.document.write(`
-        <html>
-        <head>
-            <title>Imprimir Receita</title>
-            <link rel="stylesheet" href="styles.css">
-        </head>
-        <body>
-            ${conteudo}
-            <script>
-                window.onload = function() { window.print(); }
-            <\/script>
-        </body>
-        </html>
-    `);
-	janela.document.close();
+    window.print();
 }
 
 // Carrega avaliação anterior, se houver
