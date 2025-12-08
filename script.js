@@ -11,7 +11,9 @@ function fecharModal() {
 
 function selecionarEstrela(nota) {
 	notaSelecionada = nota;
-	const estrelas = document.getElementById("estrelasModal").querySelectorAll("span");
+	const estrelas = document
+		.getElementById("estrelasModal")
+		.querySelectorAll("span");
 	estrelas.forEach((estrela, index) => {
 		estrela.textContent = index < nota ? "⭐" : "☆";
 	});
@@ -26,7 +28,6 @@ function confirmarAvaliacao() {
 	sessionStorage.setItem("avaliacaoReceita", notaSelecionada);
 	atualizarEstrelas(notaSelecionada);
 	fecharModal();
-	
 }
 
 // Atualiza visualmente as estrelas
@@ -37,7 +38,7 @@ function atualizarEstrelas(nota) {
 
 // Função para imprimir a receita
 function imprimirReceita() {
-    window.print();
+	window.print();
 }
 
 // Carrega avaliação anterior, se houver
@@ -45,3 +46,15 @@ const notaAnterior = sessionStorage.getItem("avaliacaoReceita");
 if (notaAnterior) {
 	atualizarEstrelas(parseInt(notaAnterior));
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	const primeiraDivHeader = document.querySelector("header > div:first-child");
+
+	if (primeiraDivHeader) {
+		primeiraDivHeader.style.cursor = "pointer";
+
+		primeiraDivHeader.addEventListener("click", () => {
+			window.location.href = "/";
+		});
+	}
+});

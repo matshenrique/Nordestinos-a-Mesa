@@ -1,176 +1,208 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nordestinos á Mesa</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+			integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script src="script.js"></script>
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Nordestinos á Mesa</title>
-	<link rel="stylesheet" href="styles.css" />
-	<script src="script.js"></script>
-</head>
-
-<body>
-	<!-- <h1>Nordestinos á Mesa 2</h1> -->
-	<header>
-		<div>
-			<img src="img/logo/cuscuz.png" alt="Logomarca do Nordestinos á Mesa" width="64" />
-			<h1>Nordestinos A Mesa</h1>
-		</div>
-		<div>
-			<input type="text" id="pesquisar" placeholder="O que você deseja?" />
-			<button>Pesquisar</button>
-		</div>
-	</header>
-
-	<main>
-		<section id="categorias">
-			<ul>
-				<li>
-					<a href="#carnes">
-						<span>Carnes</span>
-					</a>
-				</li>
-				<li>
-					<a href="#doces">
-						<span>Doces</span>
-					</a>
-				</li>
-				<li>
-					<a href="#massas">
-						<span>Massas</span>
-					</a>
-				</li>
-				<li>
-					<a href="#bolos">
-						<span>Bolos</span>
-					</a>
-				</li>
-				<li>
-					<a href="#caldos">
-						<span>Caldos</span>
-					</a>
-				</li>
-				<li>
-					<a href="#bebidas">
-						<span>Bebidas</span>
-					</a>
-				</li>
-				<li>
-					<a href="#salgados">
-						<span>Salgados</span>
-					</a>
-				</li>
-				<li>
-					<a href="#vegetariano">
-						<span>Vegetariano</span>
-					</a>
-				</li>
-			</ul>
-		</section>
-
-		<section id="receita">
-			<header class="receita-header">
-				<button onclick="imprimirReceita()">🖨</button>
-				<div class="receita-intro">
-					<h2 class="receita-titulo">Baião de dois a carte</h2>
-					<p class="receita-avaliacao">⭐⭐⭐⭐</p>
-					<p class="receita-duracao">🕐 1 hora</p>´
-					<button onclick="avaliarReceita()">Avalie nossa receita</button>
-				</div>
-				<div class="receita-imagem">
-					<img src="/img/pratos-destaque/baiao-de-dois.png" alt="Baião de dois a carte" />
-				</div>
-			</header>
-			<main>
-				<section class="receita-ingredientes">
-					<h3>Ingredientes</h3>
-					<ul>
-						<li>
-							<span>1/2 kg de feijão verde</span>
-						</li>
-						<li>
-							<span>1 paio cortado em rodelas</span>
-						</li>
-						<li>
-							<span>2 tabletes de caldo de carne</span>
-						</li>
-						<li>
-							<span>1 cebola ralada</span>
-						</li>
-						<li>
-							<span>1 dente de alho amassado</span>
-						</li>
-						<li>
-							<span>3 colheres (sopa) de óleo
-							</span>
-						</li>
-						<li>
-							<span>1/2 colher (sopa) de coentro picado</span>
-						</li>
-						<li>
-							<span>2 xícaras e 1/2 (chá) de arroz lavado e escorrido</span>
-						</li>
-						<li>
-							<span>150g de queijo coalho cortado em fatias finas
-							</span>
-						</li>
-					</ul>
-				</section>
-				<section class="receita-modo-preparo">
-					<h3>Modo de preparo</h3>
-					<ol>
-						<li>
-							<span>Deixe o feijão de molho de véspera</span>
-						</li>
-						<li>
-							<span>No dia seguinte cozinhe-o juntamente com o caldo de carne e 2,5 litros de água fria</span>
-						</li>
-						<li>
-							<span>Tampe a panela e deixe cozinhar em fogo baixo aproxidamante 1 hora</span>
-						</li>
-						<li>
-							<span>Em outra panela doure o paio, a cebola e o alho, no óleo</span>
-						</li>
-						<li>
-							<span>Acrescente o feijão já cozido, juntamente com o caldo. Misture bem, tampe a panela e deixe cozinhar até que o arroz
-							fique cozido, úmido e com consistência cremosa.</span>
-						</li>
-						<li>
-							<span>Cubra o arroz com as fatias de queijo. Tampe a panela novamente e deixe que o vapor derreta o queijo.
-							</span>
-						</li>
-					</ol>
-				</section>
-			</main>
-			<footer>
-				<h2>Gostou da nossa receita avalie!</h2>
-				<button onclick="avaliarReceita()">Avalie nossa receita</button>
-			</footer>
-		</section>
-
-		<div id="modalAvaliacao" class="modal-avaliacao">
-			<div class="modal-avaliacao-conteudo">
-				<span class="modal-fechar" onclick="fecharModal()">X</span>
-				<h3>Avalie esta receita</h3>
-				<div class="modal-estrelas" id="estrelasModal">
-					<span onclick="selecionarEstrela(1)">⭐</span>
-					<span onclick="selecionarEstrela(2)">⭐</span>
-					<span onclick="selecionarEstrela(3)">⭐</span>
-					<span onclick="selecionarEstrela(4)">⭐</span>
-					<span onclick="selecionarEstrela(5)">⭐</span>
-				</div>
-
-				<button class="modal-btn" onclick="confirmarAvaliacao()">Confirmar</button>
+	<body>
+		<!-- <h1>Nordestinos á Mesa 2</h1> -->
+		<header>
+			<div>
+				<img
+					src="img/logo/cuscuz.png"
+					alt="Logomarca do Nordestinos á Mesa"
+					width="64"
+				/>
+				<h1>Nordestinos A Mesa</h1>
 			</div>
+			<div>
+				<input type="text" id="pesquisar" placeholder="O que você deseja?" />
+				<button>Pesquisar</button>
+			</div>
+		</header>
 
-		</div>
-	</main>
+		<main>
+			<section id="categorias">
+				<ul>
+					<li>
+						<a href="categoria.html">
+							<span>Carnes</span>
+						</a>
+					</li>
+					<li>
+						<a href="#doces">
+							<span>Doces</span>
+						</a>
+					</li>
+					<li>
+						<a href="#massas">
+							<span>Massas</span>
+						</a>
+					</li>
+					<li>
+						<a href="#bolos">
+							<span>Bolos</span>
+						</a>
+					</li>
+					<li>
+						<a href="#caldos">
+							<span>Caldos</span>
+						</a>
+					</li>
+					<li>
+						<a href="#bebidas">
+							<span>Bebidas</span>
+						</a>
+					</li>
+					<li>
+						<a href="#salgados">
+							<span>Salgados</span>
+						</a>
+					</li>
+					<li>
+						<a href="#vegetariano">
+							<span>Vegetariano</span>
+						</a>
+					</li>
+				</ul>
+			</section>
 
-	<footer>
-		<img src="img/logo/cuscuz.png" alt="Logomarca do Nordestinos á Mesa" width="64" />
-		<h2>Nordestinos A Mesa</h2>
-		<p>Usufrua das melhores coisas para fazer com sua carne</p>
-	</footer>
-</body>
+			<section id="receita">
+				<header class="receita-header">
+					<button onclick="imprimirReceita()">
+						<i class="fa-solid fa-print"></i>
+					</button>
+					<div class="receita-intro">
+						<h2 class="receita-titulo">Baião de dois a carte</h2>
+						<p class="receita-avaliacao">⭐⭐⭐⭐</p>
+						<p class="receita-duracao">🕐 1 hora</p>
+						´
+						<button onclick="avaliarReceita()">Avalie nossa receita</button>
+					</div>
+					<div class="receita-imagem">
+						<img
+							src="/img/pratos-destaque/baiao-de-dois.png"
+							alt="Baião de dois a carte"
+						/>
+					</div>
+				</header>
+				<main>
+					<section class="receita-ingredientes">
+						<h3>Ingredientes</h3>
+						<ul>
+							<li>
+								<span>1/2 kg de feijão verde</span>
+							</li>
+							<li>
+								<span>1 paio cortado em rodelas</span>
+							</li>
+							<li>
+								<span>2 tabletes de caldo de carne</span>
+							</li>
+							<li>
+								<span>1 cebola ralada</span>
+							</li>
+							<li>
+								<span>1 dente de alho amassado</span>
+							</li>
+							<li>
+								<span>3 colheres (sopa) de óleo </span>
+							</li>
+							<li>
+								<span>1/2 colher (sopa) de coentro picado</span>
+							</li>
+							<li>
+								<span>2 xícaras e 1/2 (chá) de arroz lavado e escorrido</span>
+							</li>
+							<li>
+								<span>150g de queijo coalho cortado em fatias finas </span>
+							</li>
+						</ul>
+					</section>
+					<section class="receita-modo-preparo">
+						<h3>Modo de preparo</h3>
+						<ol>
+							<li>
+								<span>Deixe o feijão de molho de véspera</span>
+							</li>
+							<li>
+								<span
+									>No dia seguinte cozinhe-o juntamente com o caldo de carne e
+									2,5 litros de água fria</span
+								>
+							</li>
+							<li>
+								<span
+									>Tampe a panela e deixe cozinhar em fogo baixo aproxidamante 1
+									hora</span
+								>
+							</li>
+							<li>
+								<span
+									>Em outra panela doure o paio, a cebola e o alho, no
+									óleo</span
+								>
+							</li>
+							<li>
+								<span
+									>Acrescente o feijão já cozido, juntamente com o caldo.
+									Misture bem, tampe a panela e deixe cozinhar até que o arroz
+									fique cozido, úmido e com consistência cremosa.</span
+								>
+							</li>
+							<li>
+								<span
+									>Cubra o arroz com as fatias de queijo. Tampe a panela
+									novamente e deixe que o vapor derreta o queijo.
+								</span>
+							</li>
+						</ol>
+					</section>
+				</main>
+				<footer>
+					<h2>Gostou da nossa receita avalie!</h2>
+					<button onclick="avaliarReceita()">Avalie nossa receita</button>
+				</footer>
+			</section>
 
+			<div id="modalAvaliacao" class="modal-avaliacao">
+				<div class="modal-avaliacao-conteudo">
+					<span class="modal-fechar" onclick="fecharModal()">X</span>
+					<h3>Avalie esta receita</h3>
+					<div class="modal-estrelas" id="estrelasModal">
+						<span onclick="selecionarEstrela(1)">⭐</span>
+						<span onclick="selecionarEstrela(2)">⭐</span>
+						<span onclick="selecionarEstrela(3)">⭐</span>
+						<span onclick="selecionarEstrela(4)">⭐</span>
+						<span onclick="selecionarEstrela(5)">⭐</span>
+					</div>
+
+					<button class="modal-btn" onclick="confirmarAvaliacao()">
+						Confirmar
+					</button>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<img
+				src="img/logo/cuscuz.png"
+				alt="Logomarca do Nordestinos á Mesa"
+				width="64"
+			/>
+			<h2>Nordestinos A Mesa</h2>
+			<p>Usufrua das melhores coisas para fazer com sua carne</p>
+		</footer>
+	</body>
 </html>

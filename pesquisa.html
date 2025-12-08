@@ -1,159 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nordestinos á Mesa</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js"></script>
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Nordestinos á Mesa</title>
-	<link rel="stylesheet" href="styles.css" />
-	<script src="script.js"></script>
-</head>
-
-<body>
-	<!-- <h1>Nordestinos á Mesa 2</h1> -->
-	<header>
-		<div>
-			<img src="img/logo/cuscuz.png" alt="Logomarca do Nordestinos á Mesa" width="64" />
-			<h1>Nordestinos A Mesa</h1>
-		</div>
-		<div>
-			<input type="text" id="pesquisar" placeholder="O que você deseja?" />
-			<button>Pesquisar</button>
-		</div>
-	</header>
-
-	<main>
-		<section id="categorias">
-			<ul>
-				<li>
-					<a href="#carnes">
-						<span>Carnes</span>
-					</a>
-				</li>
-				<li>
-					<a href="#doces">
-						<span>Doces</span>
-					</a>
-				</li>
-				<li>
-					<a href="#massas">
-						<span>Massas</span>
-					</a>
-				</li>
-				<li>
-					<a href="#bolos">
-						<span>Bolos</span>
-					</a>
-				</li>
-				<li>
-					<a href="#caldos">
-						<span>Caldos</span>
-					</a>
-				</li>
-				<li>
-					<a href="#bebidas">
-						<span>Bebidas</span>
-					</a>
-				</li>
-				<li>
-					<a href="#salgados">
-						<span>Salgados</span>
-					</a>
-				</li>
-				<li>
-					<a href="#vegetariano">
-						<span>Vegetariano</span>
-					</a>
-				</li>
-			</ul>
-		</section>
-
-		<section id="pratos">
-
-			<h2>Resultados encontrados</h2>
-			
-			<div class="prato-card">
-				<img src="img/pratos-destaque/baiao-de-dois.png" alt="Nome do prato" />
-				<h2>Baião de dois a carte</h2>
-				<p>⭐⭐⭐⭐⭐</p>
+	<body>
+		<!-- <h1>Nordestinos á Mesa 2</h1> -->
+		<header>
+			<div>
+				<img
+					src="img/logo/cuscuz.png"
+					alt="Logomarca do Nordestinos á Mesa"
+					width="64"
+				/>
+				<h1>Nordestinos A Mesa</h1>
 			</div>
-
-			<div class="prato-card">
-				<img src="img/pratos-destaque/cocada-queimada.png" alt="Cocada Queimada">
-				<h2>Cocada Queimada</h2>
-				<p>⭐⭐⭐⭐</p>
+			<div>
+				<input type="text" id="pesquisar" placeholder="O que você deseja?" />
+				<button>Pesquisar</button>
 			</div>
+		</header>
 
-			<div class="prato-card">
-				<img src="img/pratos-destaque/empada-de-carne-de-sol.png" alt="Empada de Carne de Sol">
-				<h2>Empada de Carne de Sol</h2>
-				<p>⭐⭐⭐⭐⭐</p>
-			</div>
+		<main>
+			<section id="categorias">
+				<ul>
+					<li>
+						<a href="categoria.html">
+							<span>Carnes</span>
+						</a>
+					</li>
+					<li>
+						<a href="#doces">
+							<span>Doces</span>
+						</a>
+					</li>
+					<li>
+						<a href="#massas">
+							<span>Massas</span>
+						</a>
+					</li>
+					<li>
+						<a href="#bolos">
+							<span>Bolos</span>
+						</a>
+					</li>
+					<li>
+						<a href="#caldos">
+							<span>Caldos</span>
+						</a>
+					</li>
+					<li>
+						<a href="#bebidas">
+							<span>Bebidas</span>
+						</a>
+					</li>
+					<li>
+						<a href="#salgados">
+							<span>Salgados</span>
+						</a>
+					</li>
+					<li>
+						<a href="#vegetariano">
+							<span>Vegetariano</span>
+						</a>
+					</li>
+				</ul>
+			</section>
 
-			<div class="prato-card">
-				<img src="img/pratos-destaque/cuscuz-com-carne-seca.png" alt="Cuscuz com Carne Seca">
-				<h2>Cuscuz com Carne Seca</h2>
-				<p>⭐⭐⭐⭐</p>
-			</div>
+			<section id="pratos">
+				<h2>Resultados encontrados</h2>
 
-			<div class="prato-card">
-				<img src="img/pratos-destaque/camarao-empanado.png" alt="Camarão empanado">
-				<h2>Camarão empanado</h2>
-				<p>⭐⭐⭐⭐</p>
-			</div>
-
-			<div class="prato-card">
-				<img src="img/pratos-destaque/baiao-de-dois.png" alt="Nome do prato" />
-				<h2>Baião de dois a carte</h2>
-				<p>⭐⭐⭐⭐⭐</p>
-			</div>
-
-			<div class="prato-card">
-				<img src="img/pratos-destaque/cocada-queimada.png" alt="Cocada Queimada">
-				<h2>Cocada Queimada</h2>
-				<p>⭐⭐⭐⭐</p>
-			</div>
-
-			<div class="prato-card">
-				<img src="img/pratos-destaque/empada-de-carne-de-sol.png" alt="Empada de Carne de Sol">
-				<h2>Empada de Carne de Sol</h2>
-				<p>⭐⭐⭐⭐⭐</p>
-			</div>
-
-			<div class="prato-card">
-				<img src="img/pratos-destaque/cuscuz-com-carne-seca.png" alt="Cuscuz com Carne Seca">
-				<h2>Cuscuz com Carne Seca</h2>
-				<p>⭐⭐⭐⭐</p>
-			</div>
-
-			<div class="prato-card">
-				<img src="img/pratos-destaque/camarao-empanado.png" alt="Camarão empanado">
-				<h2>Camarão empanado</h2>
-				<p>⭐⭐⭐⭐</p>
-			</div>
-
-		</section>
-
-		<section id="paginacao">
-			<div class="navegacao">
-				<button>&lt;</button>
-				<div class="paginas">
-					<a href="#">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-					<a href="#">4</a>
-					<a href="#">5</a>
+				<div class="prato-card">
+					<img
+						src="img/pratos-destaque/baiao-de-dois.png"
+						alt="Nome do prato"
+					/>
+					<h2>Baião de dois a carte</h2>
+					<p>⭐⭐⭐⭐⭐</p>
 				</div>
-				<button>&gt;</button>
-			</div>
-		</section>
-	</main>
 
-	<footer>
-		<img src="img/logo/cuscuz.png" alt="Logomarca do Nordestinos á Mesa" width="64" />
-		<h2>Nordestinos A Mesa</h2>
-		<p>Usufrua das melhores coisas para fazer com sua carne</p>
-	</footer>
-</body>
+				<div class="prato-card">
+					<img
+						src="img/pratos-destaque/cocada-queimada.png"
+						alt="Cocada Queimada"
+					/>
+					<h2>Cocada Queimada</h2>
+					<p>⭐⭐⭐⭐</p>
+				</div>
 
+				<div class="prato-card">
+					<img
+						src="img/pratos-destaque/empada-de-carne-de-sol.png"
+						alt="Empada de Carne de Sol"
+					/>
+					<h2>Empada de Carne de Sol</h2>
+					<p>⭐⭐⭐⭐⭐</p>
+				</div>
+
+				<div class="prato-card">
+					<img
+						src="img/pratos-destaque/cuscuz-com-carne-seca.png"
+						alt="Cuscuz com Carne Seca"
+					/>
+					<h2>Cuscuz com Carne Seca</h2>
+					<p>⭐⭐⭐⭐</p>
+				</div>
+
+				<div class="prato-card">
+					<img
+						src="img/pratos-destaque/camarao-empanado.png"
+						alt="Camarão empanado"
+					/>
+					<h2>Camarão empanado</h2>
+					<p>⭐⭐⭐⭐</p>
+				</div>
+
+				<div class="prato-card">
+					<img
+						src="img/pratos-destaque/baiao-de-dois.png"
+						alt="Nome do prato"
+					/>
+					<h2>Baião de dois a carte</h2>
+					<p>⭐⭐⭐⭐⭐</p>
+				</div>
+
+				<div class="prato-card">
+					<img
+						src="img/pratos-destaque/cocada-queimada.png"
+						alt="Cocada Queimada"
+					/>
+					<h2>Cocada Queimada</h2>
+					<p>⭐⭐⭐⭐</p>
+				</div>
+
+				<div class="prato-card">
+					<img
+						src="img/pratos-destaque/empada-de-carne-de-sol.png"
+						alt="Empada de Carne de Sol"
+					/>
+					<h2>Empada de Carne de Sol</h2>
+					<p>⭐⭐⭐⭐⭐</p>
+				</div>
+
+				<div class="prato-card">
+					<img
+						src="img/pratos-destaque/cuscuz-com-carne-seca.png"
+						alt="Cuscuz com Carne Seca"
+					/>
+					<h2>Cuscuz com Carne Seca</h2>
+					<p>⭐⭐⭐⭐</p>
+				</div>
+
+				<div class="prato-card">
+					<img
+						src="img/pratos-destaque/camarao-empanado.png"
+						alt="Camarão empanado"
+					/>
+					<h2>Camarão empanado</h2>
+					<p>⭐⭐⭐⭐</p>
+				</div>
+			</section>
+
+			<section id="paginacao">
+				<div class="navegacao">
+					<button>&lt;</button>
+					<div class="paginas">
+						<a href="#">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+					</div>
+					<button>&gt;</button>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<img
+				src="img/logo/cuscuz.png"
+				alt="Logomarca do Nordestinos á Mesa"
+				width="64"
+			/>
+			<h2>Nordestinos A Mesa</h2>
+			<p>Usufrua das melhores coisas para fazer com sua carne</p>
+		</footer>
+	</body>
 </html>
