@@ -88,7 +88,7 @@ header > div:nth-child(2) button:hover {
 #hero, #carnes {
 	width: 100%;
 	height: 400px;
-	background: url('/img/pratos-destaque/comidas-nordestina.png') center / cover no-repeat;
+	background: url('https://raw.githubusercontent.com/deyvidsalvatore/Nordestinos-a-Mesa/refs/heads/main/img/carnes/carnes.jpg') center / cover no-repeat;
 	background-position: 25% 75%;
 	max-height: 400px;
 	display: flex;
@@ -100,7 +100,7 @@ header > div:nth-child(2) button:hover {
 }
 
 #carnes {
-	background: url('/img/carnes/carnes.jpg') center / cover no-repeat;
+	background: url('https://raw.githubusercontent.com/deyvidsalvatore/Nordestinos-a-Mesa/refs/heads/main/img/carnes/carnes.jpg') center / cover no-repeat;
 }
 
 #hero h2 {

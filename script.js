@@ -46,15 +46,3 @@ const notaAnterior = sessionStorage.getItem("avaliacaoReceita");
 if (notaAnterior) {
 	atualizarEstrelas(parseInt(notaAnterior));
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-	const primeiraDivHeader = document.querySelector("header > div:first-child");
-
-	if (primeiraDivHeader) {
-		primeiraDivHeader.style.cursor = "pointer";
-
-		primeiraDivHeader.addEventListener("click", () => {
-			window.location.href = "/";
-		});
-	}
-});
