@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		primeiraDivHeader.style.cursor = "pointer";
 
 		primeiraDivHeader.addEventListener("click", () => {
-			window.location.href = "/";
+			window.location.href = "index.html";
 		});
 	}
 });
